@@ -1,12 +1,20 @@
 import { Link } from "react-router-dom";
 import { EctoplasmDrips } from "../components/EctoplasmDrips";
-import { BUFALIEN_TOTAL } from "../config/commerce";
+import { BUFALIEN_TOTAL, siteHeroImageUrl } from "../config/commerce";
 
 export function Home() {
   return (
     <div className="home">
       <EctoplasmDrips />
       <section className="home-hero">
+        <img
+          className="home-hero-image"
+          src={siteHeroImageUrl()}
+          alt="Bufalien — buff cyclopean visitor from another world"
+          width={1200}
+          height={675}
+          fetchPriority="high"
+        />
         <p className="eyebrow">First contact · Bulk diplomacy</p>
         <h1 className="home-title">The Bufalien civilization</h1>
         <p className="home-lead">

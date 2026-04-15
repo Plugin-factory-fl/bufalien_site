@@ -14,3 +14,8 @@ export function formatUsd(cents: number): string {
 export function bufalienImageUrl(id: number): string {
   return `${import.meta.env.BASE_URL}bufaliens/${id}.png`;
 }
+
+/** Static marketing image from `public/site` (symlinked to `assets/site`). */
+export function siteHeroImageUrl(): string {
+  return `${import.meta.env.BASE_URL}site/hero.png`;
+}
