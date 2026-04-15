@@ -1,0 +1,50 @@
+.ecto-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.ecto-svg {
+  position: absolute;
+  top: -2%;
+  left: 50%;
+  width: 140%;
+  min-width: 900px;
+  height: 55%;
+  transform: translateX(-50%);
+  opacity: 0.85;
+  filter: drop-shadow(0 0 18px rgba(60, 255, 120, 0.35));
+}
+
+.ecto-drip {
+  transform-origin: top center;
+  animation: ectoDrip 7s ease-in-out infinite;
+}
+
+.ecto-drip--2 {
+  animation-delay: -2.2s;
+  animation-duration: 8.5s;
+}
+
+.ecto-drip--3 {
+  animation-delay: -4.1s;
+  animation-duration: 6.2s;
+}
+
+@keyframes ectoDrip {
+  0%,
+  100% {
+    transform: translateY(0) scaleY(1);
+    opacity: 0.75;
+  }
+  40% {
+    transform: translateY(12px) scaleY(1.06);
+    opacity: 0.95;
+  }
+  70% {
+    transform: translateY(28px) scaleY(1.12);
+    opacity: 0.88;
+  }
+}
